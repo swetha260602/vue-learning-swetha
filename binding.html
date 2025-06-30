@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <a v-bind:href="link" id="url">click here</a>
+    <script>
+        let a=Vue.createApp({
+            data(){
+                return{
+                    link: "https://www.google.com",
+
+                }
+            }
+        });
+        a.mount('#url');
+    </script>
+    <style>
+
+    </style>
+</body>
+</html>
