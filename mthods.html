@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="link" >learn Vue.js
+   <a v-bind:href="link">click here to learn</a>
+    <div>{{ getText() }}</div>
+    </h1>
+
+    <script>
+       let app= vue.createApp(
+            {
+                data(){
+                    return{
+                        link:"https://vuejs.org",
+                    }
+
+                },
+                methods:{
+                    getText(){
+                        return "The progressive Javascript framework";
+
+                    }
+                }
+            }
+        );
+        app.mount('#link');
+
+
+    </script>
+    <style>
+
+    </style>
+    
+</body>
+</html>
